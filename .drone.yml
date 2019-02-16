@@ -24,6 +24,7 @@ steps:
       from_secret: aws_secret_access_key
     source: public/**/*
     target: /
+    strip_prefix: public/
   when:
     branch:
     - master
