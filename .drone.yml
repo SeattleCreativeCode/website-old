@@ -1,13 +1,18 @@
 kind: pipeline
 name: default
 
+platform:
+  os: linux
+  arch: amd64
+
+clone:
+  depth: 1
+
 steps:
 - name: build
-  image: plugins/hugo
-  settings:
-    hugo_version: 0.55
-    validate: true
-    buildFuture: true
+  image: stainlessio/hugo:0.54.0
+  commands:
+  - hugo
 
 - name: deploy
   image: plugins/s3
