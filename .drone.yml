@@ -9,19 +9,19 @@ steps:
     validate: true
     buildFuture: true
 
-- name: deploy
-  image: plugins/s3
-  settings:
-    bucket: livecodeseattle.com
-    access_key:
-      from_secret: aws_access_key_id
-    secret_key:
-      from_secret: aws_secret_access_key
-    source: public/**/*
-    target: /
-  when:
-    branch:
-    - master
-    event:
-      exclude:
-      - pull_request
+# - name: deploy
+#   image: plugins/s3
+#   settings:
+#     bucket: livecodeseattle.com
+#     access_key:
+#       from_secret: aws_access_key_id
+#     secret_key:
+#       from_secret: aws_secret_access_key
+#     source: public/**/*
+#     target: /
+#   when:
+#     branch:
+#     - master
+#     event:
+#       exclude:
+#       - pull_request
