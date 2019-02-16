@@ -8,6 +8,7 @@ steps:
     hugo_version: 0.55
     validate: true
     buildFuture: true
+    verbose: true
 
 # - name: deploy
 #   image: plugins/s3
