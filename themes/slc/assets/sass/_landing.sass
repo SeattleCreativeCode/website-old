@@ -1,0 +1,35 @@
+#container.homepage
+  display: grid
+  grid-template-rows: 1fr 2fr 1fr auto
+  width: 100%
+  min-height: 100vh
+
+  .hero
+    background-color: $color1
+    color: $color3
+    display: grid
+    grid-template-rows: auto 1fr 1fr
+
+    header
+      h1
+        font-size: 3em
+
+    #summary
+      max-width: 25em
+
+    #signup
+      input[type=email]
+        width: 25em
+        background-color: $color1
+        color: $color3
+        &::placeholder
+          color: mix($color4, $color1, 50%)
+      input[type=submit]
+        background-color: $color4
+        color: $color3
+      input
+        padding: 0.25em
+        font-size: 1.5em
+
+  .content
+    max-width: 55em

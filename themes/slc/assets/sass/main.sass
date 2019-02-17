@@ -1,4 +1,21 @@
 @import "reset"
+@import "colortheory"
 
 body
   font: 100% Helvetica, sans-serif
+
+.margined
+  margin: auto
+  width: auto
+
+h1
+  font-family: Georgia, 'Times New Roman', Times, serif
+
+.code
+  padding: 0 0.25em
+  &::before
+    content: "["
+  &::after
+    content: "]"
+
+@import "landing"

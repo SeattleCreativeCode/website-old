@@ -4,11 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="{{ block "description" .}}livecodeseattle is a community of Creative Coders in the Seattle area who collaborate, educate, and stage events to celebrate the use of software to create art.{{ end }}">
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
     <title>{{ block "title" . }}{{ .Site.Title }}
     {{ end }}</title>
   </head>
   <body>
+    <header id="header">
+      {{ block "header" . }}{{ end }}
+    </header>
     {{ block "main" . }}{{ end }}
     <footer id="footer">
         {{ block "footer" . }}{{ end }}
