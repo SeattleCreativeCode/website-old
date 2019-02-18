@@ -21,13 +21,20 @@
 <script type="text/javascript">
   document.addEventListener('DOMContentLoaded', function () {
     console.log("Attaching submit listener");
-    var e = document.getElementById("submit");
-    e.addEventListener('click', submitHandler);
+    document.getElementById("submit").addEventListener('click', submitHandler);
+    document.getElementById("email").addEventListener('focus', clearError);
   });
 
   function displayError(e) {
     toggleLock(false);
-    console.error(e);
+    var field = document.getElementById("email");
+    field.className = "error";
+    field.placeholder = e;
+    field.value = '';
+  }
+
+  function clearError() {
+    document.getElementById("email").className = "";
   }
 
   function toggleLock(value) {
@@ -37,8 +44,8 @@
   }
 
   function displaySuccess() {
-    var success = document.createElement("span");
-    success.attributes['class'] = "success";
+    var success = document.createElement("div");
+    success.className = "success";
     success.innerText = "Your request has been sent."
     var signup = document.getElementById("signup");
     signup.innerHTML = '';
@@ -57,13 +64,26 @@
     return fetch(url, PARAMS);
   }
 
+  function validateEmail(email) {
+    if (email.indexOf("@") < 0) {
+      return "please enter a valid email address";
+    }
+
+    return true;
+  }
+
   function submitHandler(e) {
     const URL = "{{ $.Site.Params.api_endpoint }}";
     console.log(URL); 
     e.preventDefault();
     var email = document.getElementById("email").value;
     if (!email) {
-      displayError("Email is required");
+      displayError("email address is required");
+      return;
+    }
+    const VALID = validateEmail(email);
+    if (VALID !== true) {
+      displayError(VALID);
       return;
     }
 
