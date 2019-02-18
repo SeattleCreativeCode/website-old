@@ -44,8 +44,8 @@
   }
 
   function displaySuccess() {
-    var success = document.createElement("span");
-    success.attributes['class'] = "success";
+    var success = document.createElement("div");
+    success.className = "success";
     success.innerText = "Your request has been sent."
     var signup = document.getElementById("signup");
     signup.innerHTML = '';
