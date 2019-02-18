@@ -7,7 +7,7 @@
       <h1>live<span class="code">code</span>seattle</h1>
     </header>
     <div class="margined" id="summary">{{ .Content }}</div>
-    <div class="margined" id="signup"><input type="email" placeholder="email address" aria-placeholder="email address"><input type="submit" value="Join Slack"></div>
+    <div class="margined" id="signup"><form><input id="email" type="email" placeholder="email address" aria-placeholder="email address"><input id="submit" type="submit" value="Join Slack"></form></div>
   </div>
   <div class="spacer"></div>
   <div class="content margined">
@@ -16,4 +16,65 @@
     <p>They floated in the coffin for Armitage’s call. Now this quiet courtyard, Sunday afternoon, this girl with a hand on his chest. The Sprawl was a long strange way home over the black water and the corners he’d cut in Night City, and still he’d see the matrix in his capsule in some coffin hotel, his hands clawed into the shadow of the console. Light from a service hatch at the rear of the room where Case waited. Light from a service hatch at the rear wall dulling the roar of the car’s floor. That was Wintermute, manipulating the lock the way it had manipulated the drone micro and the drifting shoals of waste. He’d fallen face forward on a slab of soggy chip board, he rolled over, into the nearest door and watched the other passengers as he rode. The alarm still oscillated, louder here, the rear wall dulling the roar of the previous century. They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the bright void beyond the chain link. Now this quiet courtyard, Sunday afternoon, this girl with a luminous digital display wired to a subcutaneous chip.</p>
   </div>
 </div>
+{{ end }}
+{{ define "head" }}
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log("Attaching submit listener");
+    var e = document.getElementById("submit");
+    e.addEventListener('click', submitHandler);
+  });
+
+  function displayError(e) {
+    toggleLock(false);
+    console.error(e);
+  }
+
+  function toggleLock(value) {
+    document.querySelectorAll("input").forEach((e) => {
+      e.disabled = value;
+    });
+  }
+
+  function displaySuccess() {
+    var success = document.createElement("span");
+    success.attributes['class'] = "success";
+    success.innerText = "Your request has been sent."
+    var signup = document.getElementById("signup");
+    signup.innerHTML = '';
+    signup.appendChild(success);
+  }
+
+  function sendRequest(url, payload) {
+    const PARAMS = {
+      headers: {
+        "content-type": "application/json; charset=UTF-8"
+      },
+      body: payload,
+      method: "POST"
+    };
+
+    return fetch(url, PARAMS);
+  }
+
+  function submitHandler(e) {
+    const URL = "{{ $.Site.Params.api_endpoint }}";
+    console.log(URL); 
+    e.preventDefault();
+    var email = document.getElementById("email").value;
+    if (!email) {
+      displayError("Email is required");
+      return;
+    }
+
+    const PAYLOAD = JSON.stringify({
+      email
+    });
+    toggleLock(true);
+    sendRequest(URL, PAYLOAD)
+      .then(data => data.json())
+      .then(res =>{displaySuccess()})
+      .catch(e => displayError(e.toString()))
+  }
+</script>
 {{ end }}

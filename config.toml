@@ -2,3 +2,6 @@ baseURL = "http://livecodeseattle.com"
 languageCode = "en-us"
 title = "livecodeseattle"
 theme = "slc"
+
+[params]
+  api_endpoint = "https://ba6oif1gt8.execute-api.us-east-1.amazonaws.com/production"

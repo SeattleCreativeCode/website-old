@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" >
     <title>{{ block "title" . }}{{ .Site.Title }}
     {{ end }}</title>
+    {{ block "head" . }}{{ end }}
   </head>
   <body>
     <header id="header">

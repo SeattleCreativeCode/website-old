@@ -20,13 +20,30 @@
     #signup
       input[type=email]
         width: 25em
-        background-color: $color1
+        background-color: darken($color1, 5%)
         color: $color3
+        outline: none
+        border: 1px solid $color1
+        transition: all 0.30s ease-in-out;
         &::placeholder
           color: mix($color4, $color1, 50%)
+        &:focus
+          border-color: $color4
+        &:disabled
+          color: lighten($color1, 25%);
+          background-color: darken($color1, 2%)
       input[type=submit]
         background-color: $color4
         color: $color3
+        outline: none
+        border: 1px solid $color1
+        transition: all 0.30s ease-in-out;
+        &:hover
+          background-color: saturate($color4, 45%)
+          color: mix($color3, $color1, 90%)
+        &:disabled
+          background-color: darken($color1, 5%)
+          color: mix($color3, $color1, 25%)
       input
         padding: 0.25em
         font-size: 1.5em
