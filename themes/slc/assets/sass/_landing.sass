@@ -29,6 +29,9 @@
           color: mix($color4, $color1, 50%)
         &:focus
           border-color: $color4
+        &:disabled
+          color: lighten($color1, 25%);
+          background-color: darken($color1, 2%)
       input[type=submit]
         background-color: $color4
         color: $color3
@@ -38,6 +41,9 @@
         &:hover
           background-color: saturate($color4, 45%)
           color: mix($color3, $color1, 90%)
+        &:disabled
+          background-color: darken($color1, 5%)
+          color: mix($color3, $color1, 25%)
       input
         padding: 0.25em
         font-size: 1.5em

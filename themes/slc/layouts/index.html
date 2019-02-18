@@ -7,7 +7,7 @@
       <h1>live<span class="code">code</span>seattle</h1>
     </header>
     <div class="margined" id="summary">{{ .Content }}</div>
-    <div class="margined" id="signup"><input id="email" type="email" placeholder="email address" aria-placeholder="email address"><input id="submit" type="submit" value="Join Slack"></div>
+    <div class="margined" id="signup"><form><input id="email" type="email" placeholder="email address" aria-placeholder="email address"><input id="submit" type="submit" value="Join Slack"></form></div>
   </div>
   <div class="spacer"></div>
   <div class="content margined">
@@ -26,11 +26,23 @@
   });
 
   function displayError(e) {
+    toggleLock(false);
     console.error(e);
   }
 
-  function lockForm() {
+  function toggleLock(value) {
+    document.querySelectorAll("input").forEach((e) => {
+      e.disabled = value;
+    });
+  }
 
+  function displaySuccess() {
+    var success = document.createElement("span");
+    success.attributes['class'] = "success";
+    success.innerText = "Your request has been sent."
+    var signup = document.getElementById("signup");
+    signup.innerHTML = '';
+    signup.appendChild(success);
   }
 
   function sendRequest(url, payload) {
@@ -58,10 +70,10 @@
     const PAYLOAD = JSON.stringify({
       email
     });
-    lockForm();
+    toggleLock(true);
     sendRequest(URL, PAYLOAD)
       .then(data => data.json())
-      .then(res =>{console.dir(res)})
+      .then(res =>{displaySuccess()})
       .catch(e => displayError(e.toString()))
   }
 </script>
