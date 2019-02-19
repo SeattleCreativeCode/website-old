@@ -5,3 +5,16 @@ theme = "slc"
 
 [params]
   api_endpoint = "https://ba6oif1gt8.execute-api.us-east-1.amazonaws.com/production"
+
+[taxonomies]
+  topic = "topics"
+
+[menu]
+  [[menu.meetups]]
+    identifer = "ccc"
+    name = "Creative Code and Coffee Meetup"
+    url = "https://www.meetup.com/Creative-Code-and-Coffee/"
+  [[menu.meetups]]
+    identifier = "sed"
+    name = "Seattle Experiential Designers"
+    url = "https://www.meetup.com/Seattle-Experiential-Designers/"
