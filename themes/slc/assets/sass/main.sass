@@ -19,3 +19,23 @@ h1
     content: "]"
 
 @import "landing"
+@import "channelGuide"
+
+.container
+  display: grid
+  grid-template-rows: auto 1fr auto
+  min-height: 100vh
+
+  #content
+    width: 55rem
+    margin: auto
+
+  header, footer
+    margin: 0
+    background-color: $color1
+    color: $color3
+    padding: 1.5em
+
+    h1
+      margin: auto
+      width: 55rem
