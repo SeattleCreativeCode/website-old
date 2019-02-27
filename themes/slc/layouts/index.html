@@ -13,9 +13,11 @@
   <div class="content margined gridded">
     <div id="events">
       <header><h1>Events</h1></header>
-      <p>More Information Coming Soon!</p>
+      {{ range sort (where (where .Pages "Section" "events") "Date" ">=" now) "Date" "asc" }}
+      <p>{{ .Render "short" }}</p>
+      {{ end }}
     </div>
-    <div id="resources">
+    <!-- <div id="resources">
       <header><h1>Resources</h1></header>
       <p>Coming soon</p>
     </div>
@@ -26,7 +28,7 @@
     <div id="blog" class="span">
       <header><h1>Recent Posts</h1></header>
       <p>Coming soon</p>
-    </div>
+    </div> -->
   </div>
   <div class="hero" id="footer">
     <div class="margined content triple">

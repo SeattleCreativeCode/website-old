@@ -12,9 +12,7 @@
   </head>
   <body>
     <div class="container">
-    <header id="header">
-      {{ block "header" . }}{{ end }}
-    </header>
+    {{ block "header" . }}{{ end }}
     {{ block "main" . }}{{ end }}
     <footer id="footer">
         {{ block "footer" . }}{{ end }}
