@@ -10,89 +10,39 @@
     <div class="margined" id="signup"><form><input id="email" type="email" placeholder="email address" aria-placeholder="email address"><input id="submit" type="submit" value="Join Slack"></form></div>
   </div>
   <div class="spacer"></div>
-  <div class="content margined">
-    <p>More Information Coming Soon!</p>
+  <div class="content margined gridded">
+    <div id="events">
+      <header><h1>Events</h1></header>
+      {{ range sort (where (where .Pages "Section" "events") "Date" ">=" now) "Date" "asc" }}
+      <p>{{ .Render "short" }}</p>
+      {{ end }}
+    </div>
+    <!-- <div id="resources">
+      <header><h1>Resources</h1></header>
+      <p>Coming soon</p>
+    </div>
+    <div id="members" class="span">
+      <header><h1>Members</h1></header>
+      <p>Coming soon</p>
+    </div>
+    <div id="blog" class="span">
+      <header><h1>Recent Posts</h1></header>
+      <p>Coming soon</p>
+    </div> -->
+  </div>
+  <div class="hero" id="footer">
+    <div class="margined content triple">
+      <div><header><h1>Meetups</h1></header>
+      {{ partial "subnav.html" .Site.Menus.meetups }}
+      </div>
+      <div class="copyright">all content copyright respective authors</div>
+      <div><header><h1>Topics</h1></header>
+      {{ partial "subnav.html" .Site.Taxonomies.Topics }}
+      </div>
+    </div>
   </div>
 </div>
 {{ end }}
 {{ define "head" }}
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-    console.log("Attaching submit listener");
-    document.getElementById("submit").addEventListener('click', submitHandler);
-    document.getElementById("email").addEventListener('focus', clearError);
-  });
-
-  function displayError(e) {
-    toggleLock(false);
-    var field = document.getElementById("email");
-    field.className = "error";
-    field.placeholder = e;
-    field.value = '';
-  }
-
-  function clearError() {
-    document.getElementById("email").className = "";
-  }
-
-  function toggleLock(value) {
-    document.querySelectorAll("input").forEach((e) => {
-      e.disabled = value;
-    });
-  }
-
-  function displaySuccess() {
-    var success = document.createElement("div");
-    success.className = "success";
-    success.innerText = "Your request has been sent."
-    var signup = document.getElementById("signup");
-    signup.innerHTML = '';
-    signup.appendChild(success);
-  }
-
-  function sendRequest(url, payload) {
-    const PARAMS = {
-      headers: {
-        "content-type": "application/json; charset=UTF-8"
-      },
-      body: payload,
-      method: "POST"
-    };
-
-    return fetch(url, PARAMS);
-  }
-
-  function validateEmail(email) {
-    if (email.indexOf("@") < 0) {
-      return "please enter a valid email address";
-    }
-
-    return true;
-  }
-
-  function submitHandler(e) {
-    const URL = "{{ $.Site.Params.api_endpoint }}";
-    console.log(URL); 
-    e.preventDefault();
-    var email = document.getElementById("email").value;
-    if (!email) {
-      displayError("email address is required");
-      return;
-    }
-    const VALID = validateEmail(email);
-    if (VALID !== true) {
-      displayError(VALID);
-      return;
-    }
-
-    const PAYLOAD = JSON.stringify({
-      email
-    });
-    toggleLock(true);
-    sendRequest(URL, PAYLOAD)
-      .then(data => data.json())
-      .then(res =>{displaySuccess()})
-      .catch(e => displayError(e.toString()))
-  }
-</script>
+{{ partial "signupForm.html" . }}
 {{ end }}
