@@ -1,1 +1,22 @@
 {{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+{{ define "header" }}
+<header id="header">
+<h1>{{ .Title }}</h1>
+</header>
+{{ end }}
+{{ define "main" }}
+<div class="container blog list">
+  <div class="spacer"></div>
+  <div id="content">
+{{ range .Pages }}
+<article data-guid="{{ .RelPermalink }}">
+<header><h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+  <h2><span class="date">{{ .Date.Format "2006 Jan 02" }}</span></h2>
+</header>
+<div class="body">{{ .Summary }}&hellip;</div>
+</article>
+{{ end }}
+</div>
+<div class="spacer"></div>
+</div>
+{{ end }}
