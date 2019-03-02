@@ -13,6 +13,22 @@ h1
   font-family: Georgia, 'Times New Roman', Times, serif
   font-size: 3em
 
+#footer
+  font-size: 8pt
+  padding: 1.5em 0
+
+  & > .margined
+    max-width: 55rem
+    display: flex
+    justify-items: stretch
+
+    & > div
+      margin-right: 1.5rem
+      width: 100%
+
+      &:last-of-type
+        margin-right: 0
+
 .code
   padding: 0 0.25em
   &::before
@@ -60,5 +76,10 @@ h1
 .content header h1
   font-size: 1.5rem
 
+figure
+  margin-top: 0.75rem
+  margin-bottom: 0.75rem
+
 @import "events"
 @import "resource"
+@import "blog"

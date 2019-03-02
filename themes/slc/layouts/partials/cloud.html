@@ -1,0 +1,15 @@
+{{ $tags := .Params.tags }}
+{{ $max := 1 }}
+{{ range $name, $pages := $.Site.Taxonomies.tags }}
+{{ if in $tags $name }}
+{{ if gt (len $pages) $max }}
+  {{ $max := float (len $pages) }}
+{{ end }}
+{{ end }}
+{{ end }}
+{{ range $name, $pages := $.Site.Taxonomies.tags }}
+{{ if in $tags $name }}
+  {{ $size := float (len $pages) }}
+  <a href="{{ "/tags/" | absURL }}{{ $name | urlize }}" class="cloud-term" style="font-size: {{ math.Round (add 8 (mul 4 (div $size $max))) }}pt">{{ $name }}</a>
+{{ end }}
+{{ end }}
