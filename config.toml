@@ -9,6 +9,8 @@ buildFuture = true
 
 [taxonomies]
   topic = "topics"
+  tag = "tags"
+  author = "authors"
 
 [menu]
   [[menu.meetups]]

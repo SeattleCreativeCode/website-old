@@ -5,7 +5,5 @@
 </header>
 {{ end }}
 {{ define "main" }}
-<div id="content">
-    {{ .Content }}
-</div>
+{{ partial "content_with_image.html" . }}
 {{ end }}
