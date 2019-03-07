@@ -16,4 +16,6 @@ The `math` chop allows you to combine channels into a single value or scale them
 
 It took some experimenting to get the motion smoothed out to the point where it is. There are plenty of places for tweaking parameters inside of the `math` chop. In my case, the `channel pre op` is set to `Square`. The `Combine` for both channels and chops are set to `Add`, and the `pre-add` is `0.25` and the multiply is `0.5`.  This gave a nice movement when set to the `radius` of my `Circle` top. The rest of the motion is driven by the `LFOs` that are feeding into the `math` chop.
 
+Download the touchdesigner file: {{< toe "math example" >}}
+
 {{< youtube kzUm5T5RzwE >}}

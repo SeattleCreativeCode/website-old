@@ -18,4 +18,6 @@ Due to traveling, I'm a bit behind on my daily posts and explorations, so I deci
 
 `Limit` allows you to force a channel to be between two values with a number of different options handle values that are outside of the limit. I used the `clamp` option which replaces any value above the upper limit to the upper limit, and same for the lower limit.
 
+Download the touchdesigner file: {{< toe "speed and limit example" >}}
+
 {{< youtube tKmFLQI8t6k >}}

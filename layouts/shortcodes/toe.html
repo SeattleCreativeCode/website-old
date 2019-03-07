@@ -1,0 +1,2 @@
+{{ $toe := $.Page.Resources.GetMatch "*.toe" }}
+<a href="{{ $toe.RelPermalink }}" class="toe">{{ .Get 0 }}</a>

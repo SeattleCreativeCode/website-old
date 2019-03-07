@@ -22,4 +22,6 @@ All of these were fed into a `DAT` which is controlling a `ramp top` to create a
 
 In the video below, I'm using `Op Viewer`, `layout`, and `movie file out` to create the view so you can see each of the control signals as well as the output.
 
+Download the touchdesigner file: {{< toe "lfo example" >}}
+
 {{< youtube mJ43js2nXaE >}}

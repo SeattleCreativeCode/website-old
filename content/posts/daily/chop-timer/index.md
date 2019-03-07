@@ -21,4 +21,6 @@ Additionally, `Timer` can be configured to have multiple segments so the timing 
 
 In the example, I'm using two of the columns in the `Segment DAT`: `begin` and `length`. This allows me to create multiple segments of timing for the growing.
 
+Download the touchdesigner file: {{< toe "timer example" >}}
+
 {{< youtube xgIac0Nwzf4 >}}
