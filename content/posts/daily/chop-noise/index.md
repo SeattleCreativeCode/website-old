@@ -1,7 +1,8 @@
 +++
 title = "CHOPS: Noise"
 date = "2019-03-07T14:53:20-07:00"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "noise", "touchdesigner", "basics", "learning"]
 

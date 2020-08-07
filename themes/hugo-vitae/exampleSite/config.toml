@@ -1,13 +1,13 @@
-baseURL = "https://livecodeseattle.com"
+baseURL = "http://example.org/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
-author = "Seattle Creative Code Community"
-title = "Seattle Creative Code"
+author = "Hugo Authors"
+title = "Vitae"
 theme = "hugo-vitae"
 paginate = 5
 enableRobotsTXT = true
 
-copyright = "All Content Copyright Respective Authors"
+copyright = "© Copyright notice | [Vitae](https://github.com/dataCobra/hugo-vitae) theme for [Hugo](https://gohugo.io)"
 
 pygmentsstyle = "colorful"
 pygmentscodefences = true
@@ -17,39 +17,39 @@ googleAnalytics = ""
 
 [taxonomies]
 	tag = "tags"
-	category = "topics"
+	category = "categories"
 	series = "series"
 
 [params]
 	# Use homepage.md instead of a list of posts
-	homepage = true
+	homepage = false
 
 	# Add meta keywords in head part (Site Keywords or Tags of Page)
-	keywords = ["seattle","creative","code","algorave"]
+	keywords = ["hugo","vitae","theme","static"]
 
 	# Add meta description in head part
-	description = "The Seattle Creative Code Community"
+	description = "Vitae is a blog theme for Hugo that focuses on your content."
 
 	# Add pagetitle to homepage <title> tag
-	pagetitle = "Using Code to Make Art"
+	pagetitle = "All about static site generation"
 
 	# Add a subtitle to your website
-	subtitle = ""
+	subtitle = "[Vitae](https://github.com/dataCobra/hugo-vitae) is a blog theme for Hugo that focuses on your content."
 
 	# Activate to show authors on pages if available
-	listAuthor = true
+	#listAuthor = true
 
 	# Add math typesetting with KaTeX (Global with this Param)
 	math = true
 
 	# Optional 80x80 avatar image.
-	avatar = "/img/logo.png"
+	avatar = "/img/vitae.jpg"
 
 	# Optional favicons for website
 	#favicon = true
 
 	# Add list of sections that should show up on the homepage
-        mainSections = ["posts"]
+        mainSections = ["post"]
 
 	# Add list of Sections/Types that should no be considered by RSS
 	#nofeedSections = ["post"]
@@ -85,10 +85,15 @@ name = "Home"
 url = "/"
 weight = 1
 
-# [[menu.main]]
-# name = "Events"
-# url = "/events"
-# weight = 3
+[[menu.main]]
+name = "All Posts"
+url = "/post"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3
 
 [[menu.main]]
 name = "Tags"
@@ -96,15 +101,15 @@ url = "/tags"
 weight = 4
 
 [[menu.main]]
-name = "Join Slack"
-url = "/join-slack"
+name = "Categories"
+url = "/categories"
 weight = 5
 
 # Social Menu
-# [[params.social]]
-# name = "Github"
-# icon = "fab fa-github"
-# url = "https://github.com/dataCobra/hugo-vitae"
+[[params.social]]
+name = "Github"
+icon = "fab fa-github"
+url = "https://github.com/dataCobra/hugo-vitae"
 
 [[params.social]]
 name = "RSS"

@@ -2,7 +2,8 @@
 date = "2019-03-03T00:00:00+0800"
 title = "CHOPS: Math"
 summary = "TouchDdesigner Deep Dive Day One, CHOPS, Math"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "math", "touchdesigner", "basics", "learning"]
 

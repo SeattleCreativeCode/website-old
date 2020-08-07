@@ -1,7 +1,8 @@
 +++
 date = "2019-03-07T00:00:00+0800"
 title = "CHOPS: Timer"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "timer", "touchdesigner", "basics", "learning"]
 

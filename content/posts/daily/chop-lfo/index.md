@@ -2,7 +2,8 @@
 date = "2019-03-02T00:00:00+0800"
 title = "CHOPS: LFO"
 summary = "TouchDdesigner Deep Dive Day One, CHOPS, LFO"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "lfo", "touchdesigner", "basics", "learning"]
 

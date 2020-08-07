@@ -2,7 +2,8 @@
 date = "2019-03-05T00:00:00+0800"
 title = "CHOPS: Speed + Limit"
 summary = "TouchDdesigner Deep Dive Day One, CHOPS, Speed + Limit"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "speed", "limit", "touchdesigner", "basics", "learning"]
 

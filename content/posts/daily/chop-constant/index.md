@@ -2,7 +2,8 @@
 date = "2019-03-01T00:00:00+0800"
 title = "CHOPS: Constant"
 summary = "TouchDdesigner Deep Dive Day One, CHOPS, Constant"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "constant", "touchdesigner", "basics", "learning"]
 

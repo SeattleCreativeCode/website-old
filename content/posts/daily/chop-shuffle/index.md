@@ -1,7 +1,8 @@
 +++
 title = "CHOPS: Shuffle"
 date = "2019-03-08T09:31:43-07:00"
-authors = ["stainless"]
+author = "Russell Hay"
+authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "shuffle", "chop", "touchdesigner", "basics", "learning"]
 
