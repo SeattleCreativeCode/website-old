@@ -1,5 +1,5 @@
 +++
-title = ""
+title = "The Seattle Creative Code Community"
 +++
 Seattle Creative Code is a community of Creative Coders in the Seattle area who collaborate, educate, and stage events to celebrate the use of software to create art.
 
