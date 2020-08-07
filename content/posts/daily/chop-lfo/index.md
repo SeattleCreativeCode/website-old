@@ -6,12 +6,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "lfo", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "lfo.png"
-  title = "LFO Chop"
-  [resource.params]
-    description = "A screenshot of touchdesigner with three LFO CHOPs feeding into a circular gradient."
+image = "lfo.png"
+imagetext = "A screenshot of touchdesigner with three LFO CHOPs feeding into a circular gradient."
 +++
 In the previous entry [CHOPS: Constant]({{< ref "chop-constant/index.md" >}}), in order to get any kind of motion, we had to write a python expression. If all we had was `constant` chops, we could still get alot accomplished by using python expressions to drive a visual, but that would get tedious, and I have a feeling cooking performance would suffer, though that's mostly just conjecture on my part.
 

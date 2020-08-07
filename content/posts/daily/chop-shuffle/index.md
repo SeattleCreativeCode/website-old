@@ -5,12 +5,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "shuffle", "chop", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "shuffle.png"
-  title = "Shuffle Chop"
-  [resource.params]
-    description = "A screenshot of touchdesigner with a four channel noise chop feeding into the shuffle chop "
+image = "shuffle.png"
+imagetext = "A screenshot of touchdesigner with a four channel noise chop feeding into the shuffle chop "
 +++
 The `shuffle` chop allows you to reshape the signals coming into the chop. There are a number of different ways to reshape it. You can convert samples into channels, or combine sequentially multiple channels into a single one, or slice the samples into a controllable number of channels.
 

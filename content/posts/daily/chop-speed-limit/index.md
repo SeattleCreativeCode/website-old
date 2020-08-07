@@ -6,12 +6,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "speed", "limit", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "speedlimit.png"
-  title = "Speed & Limit Chops"
-  [resource.params]
-    description = "A screenshot of touchdesigner with a network that is LFO into speed into math into limit into circle"
+image = "speedlimit.png"
+imagetext = "A screenshot of touchdesigner with a network that is LFO into speed into math into limit into circle"
 +++
 Due to traveling, I'm a bit behind on my daily posts and explorations, so I decided to combine `Speed` and `Limit` together because I felt like both are easy enough to grasp that it wouldn't do a disservice to do them together.
 

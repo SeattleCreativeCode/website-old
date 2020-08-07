@@ -6,12 +6,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "constant", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "Constant.png"
-  title = "Constant Chop"
-  [resource.params]
-    description = "A screenshot of touchdesigner with a constant chop feeding into a chop to top that generates a full screen solid block of color, which is currently blood orange"
+image = "Constant.png"
+imagetext = "A screenshot of touchdesigner with a constant chop feeding into a chop to top that generates a full screen solid block of color, which is currently blood orange"
 +++
 One thing that I like to do when trying to learn new things is to dive deep into the details. With TouchDesigner, the details are all of the available `ops` that are provided.  There are a few different types of `ops` that define textures, channels, surfaces, and other things.
 

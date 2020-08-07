@@ -6,12 +6,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "math", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "math.png"
-  title = "Math Chop"
-  [resource.params]
-    description = "A screenshot of touchdesigner with two LFO chops feeding into a math chop which is driving a circle top."
+image = "math.png"
+imagetext = "A screenshot of touchdesigner with two LFO chops feeding into a math chop which is driving a circle top."
 +++
 The `math` chop allows you to combine channels into a single value or scale them up/down using pre-add, post-add, and multiply. This allows you to combine simple chops to create complex movement. In the case of the sketch that I created, it allowed me to create a bit of [anticipation](https://www.youtube.com/watch?v=F8OtE60T8yU) in the movement.
 

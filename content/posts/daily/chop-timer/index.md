@@ -5,12 +5,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "timer", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "timer.png"
-  title = "Timer Chop"
-  [resource.params]
-    description = "A screenshot of touchdesigner with a timer that feeds into a circle."
+image = "timer.png"
+imagetext = "A screenshot of touchdesigner with a timer that feeds into a circle."
 +++
 The `Timer` chop is the first one where we get a bit of real complexity in what it takes to make it work.  Out of the box, it has three channels. Two are "binary" channels, for `ready` and `done`. The other is an increasing `timer_fraction` which represents the progress of the timer.
 

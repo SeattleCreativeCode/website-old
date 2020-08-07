@@ -5,12 +5,8 @@ author = "Russell Hay"
 authorLink = "https://graysonarts.com"
 topics = ["TouchDesigner"]
 tags = ["chops", "chop", "noise", "touchdesigner", "basics", "learning"]
-
-[[resources]]
-  src = "noise.png"
-  title = "Noise Chop"
-  [resource.params]
-    description = "A screenshot of touchdesigner with noise driving a collection of lines that move and flash"
+image = "noise.png"
+imagetext = "A screenshot of touchdesigner with noise driving a collection of lines that move and flash"
 +++
 `Noise` oh how I love the `noise` chop. It's a great way to add movement and interest into a system without having to be specific about what you want to create. By using noise, you can add variety into the system and generate an infinite combination of things.
 
