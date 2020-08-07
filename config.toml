@@ -85,10 +85,10 @@ name = "Home"
 url = "/"
 weight = 1
 
-# [[menu.main]]
-# name = "Events"
-# url = "/events"
-# weight = 3
+[[menu.main]]
+name = "SnackChats"
+url = "/snackchats"
+weight = 3
 
 [[menu.main]]
 name = "Tags"
