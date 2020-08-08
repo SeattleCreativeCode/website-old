@@ -14,7 +14,7 @@ You can request to give a SnackChat by [signing up on notion](https://www.notion
 
 ## Upcoming SnackChats
 
-* 16 August 2020, 5pm Pacific Time - Stepper Motors with [Grayson Arts](https://graysonarts.com/)
+* 16 August 2020, 5pm Pacific Time - Stepper Motors with [Grayson Arts](https://graysonarts.com/) - [Live Stream](https://youtu.be/dyLpso9LpVQ)
 
 ## Previous SnackChats
 
