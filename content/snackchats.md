@@ -15,7 +15,7 @@ You can request to give a SnackChat by [signing up on notion](https://www.notion
 ## Upcoming SnackChats
 
 * 16 August 2020, 5pm Pacific Time - Stepper Motors with [Grayson Arts](https://graysonarts.com/) - [Live Stream](https://youtu.be/dyLpso9LpVQ)
-* 21 August 2020, 5pm Pacific Time - ML Art Taste Tester with Lia Coleman - [Live Stream](https://youtu.be/6BJa_bX0QyY)
+* 21 August 2020, 5pm Pacific Time - ML Art Taste Tester with [Lia Coleman](http://liacoleman.com/) - [Live Stream](https://youtu.be/HmQy5Xilw6I)
 
 ## Previous SnackChats
 
